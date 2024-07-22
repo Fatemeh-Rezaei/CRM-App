@@ -1,7 +1,11 @@
-function Form() {
+import ItemList from "./ItemList";
+
+function Form({ form, setForm }) {
   return (
-    <div>Form</div>
-  )
+    <div>
+      <ItemList form={form} setFrom={setForm} />
+    </div>
+  );
 }
 
-export default Form
+export default Form;

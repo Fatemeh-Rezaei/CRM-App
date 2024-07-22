@@ -1,6 +1,6 @@
-import { useState } from "react";
 import { useRouter } from "next/router";
-import CustomerEditPage from "../../components/template/CustomerEditPage";
+import { useState } from "react";
+import CustomerDetailsPage from "../../components/template/CustomerDetailsPage";
 import fetchCustomerById from "../../utils/fetchCustomerById";
 
 function Index() {
@@ -13,7 +13,7 @@ function Index() {
 
   fetchCustomerById(isReady, customerId, setData);
 
-  if (data) return <CustomerEditPage data={data} id={customerId} />;
+  if (data) return <CustomerDetailsPage data={data} />;
 }
 
 export default Index;
